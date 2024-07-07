@@ -12,12 +12,12 @@
 	--primary_color: #2c310b;
 	--background_color: #fffbfa;
 
-	--h1: 32px;
+	--h1: 34px;
 	--h2: 24px;
 	--h3: 20px;
 	--h4: 16px;
 
-	--feature_text: 15px;
+	--feature_text: 18px;
 
 	--bs: 11px;
 	--bb: 12px;
@@ -25,6 +25,64 @@
 
 	--sp_lr: 190px;
 	--sp_btw_section: 150px;
+}
+
+.h1 {
+	font-size: var(--h1);
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.h2 {
+	font-size: var(--h2);
+	font-weight: 500;
+	text-transform: capitalize;
+	margin-bottom: 10px;
+}
+
+.h3 {
+	font-size: var(--h3);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.h4 {
+	font-size: var(--h4);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.pb {
+	font-size: var(--bb);
+	font-weight: 100;
+}
+
+.pm {
+	font-size: var(--bm);
+	font-weight: 400;
+}
+.ps {
+	font-size: var(--bs);
+	font-weight: 400;
+}
+
+.feature_text {
+	text-decoration: underline;
+	color: white;
+	font-size: var(--feature_text);
+	font-weight: 500;
+}
+
+.btn {
+	background-color: var(--primary_color);
+	padding: 10px 30px;
+	color: white;
+	font-weight: 600;
+	border-radius: 4px;
+	outline: none;
+	border: none;
+	text-transform: uppercase;
+	font-size: var(--bb);
 }
 
 body {
@@ -60,6 +118,7 @@ a {
 	color: var(--primary_color);
 	font-size: 12px;
 	font-weight: 600;
+	padding-bottom: 8px;
 }
 
 .active {
@@ -67,6 +126,9 @@ a {
 	padding-bottom: 8px;
 }
 
+/* a:active {
+	border-bottom: 2px solid var(--primary_color);
+} */
 /* hero section ------------------------------------------------------------------------------------*/
 .hero_section {
 	margin-inline: var(--sp_lr);
@@ -81,30 +143,11 @@ a {
 	width: 580px;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 10px;
 	align-items: start;
 }
-
-.left_hero_section h1 {
-	font-size: var(--h1);
-	font-weight: 600;
-}
-
-.left_hero_section p {
-	font-size: var(--bm);
-	font-weight: 400;
-}
-
-.btn {
-	background-color: var(--primary_color);
-	padding: 10px 30px;
-	color: white;
-	font-weight: 600;
-	border-radius: 4px;
-	outline: none;
-	border: none;
-	text-transform: uppercase;
-	font-size: var(--bb);
+.left_hero_section .btn {
+	margin-top: 20px;
 }
 .right_hero_section {
 	position: relative;
@@ -157,26 +200,17 @@ a {
 	position: relative;
 	align-items: start;
 }
-.about_us_right .feature_text {
-	text-decoration: underline;
-	color: white;
-	font-size: var(--feature_text);
-}
+
 .about_us_text {
 	display: inline-block;
 	width: 350px;
 }
-.about_us_text h2 {
-	color: white;
-	font-size: var(--h2);
-	margin-bottom: 10px;
-}
-.about_us_text p {
-	color: white;
-	font-size: var(--bm);
-	font-weight: 400;
-}
 
+.about_us_text p,
+h2,
+.feature_text {
+	color: white;
+}
 .about_us_right .metrics {
 	background-color: var(--background_color);
 	color: var(--primary_color);
@@ -186,12 +220,6 @@ a {
 .metrics span {
 	text-align: center;
 	margin: 15px 25px;
-}
-.metrics span h1 {
-	font-size: var(--h1);
-}
-.metrics span p {
-	font-size: var(--bs);
 }
 
 /* featured properties------------------------------------------------------------------------------ */
@@ -203,6 +231,7 @@ a {
 	align-items: center;
 	gap: 30px;
 }
+
 .featured_prop_card {
 	display: flex;
 	align-items: center;
@@ -223,7 +252,6 @@ a {
 
 .card_image img {
 	width: 100%;
-	/* border-radius: 8px 8px 0px 0px; */
 }
 .card_content {
 	display: flex;
@@ -238,10 +266,7 @@ a {
 	justify-content: space-between;
 	width: 100%;
 }
-.price_wrapper .price span {
-	font-size: 9px;
-	font-weight: 400;
-}
+
 .price_wrapper .prop_type {
 	background-color: #40cc29;
 	padding: 8px 16px;
@@ -249,9 +274,12 @@ a {
 	font-size: var(--bs);
 	border-radius: 4px;
 }
-.price_wrapper .price h4 {
-	font-size: var(--h3);
+
+.price_wrapper .price span {
+	font-size: 9px;
+	font-weight: 400;
 }
+
 .price_wrapper .sale {
 	background-color: #cca829;
 }
@@ -260,19 +288,12 @@ a {
 	flex-direction: column;
 	gap: 15px;
 	align-items: start;
-	padding: 25px 15px;
+	padding: 15px 15px;
 }
 .card_desc {
 	display: flex;
 	gap: 6px;
 	flex-direction: column;
-}
-.card_text h4 {
-	font-size: var(--h4);
-}
-.card_desc p {
-	font-size: var(--bs);
-	font-weight: 100;
 }
 .price_wrapper {
 	display: flex;
@@ -286,13 +307,12 @@ a {
 }
 
 .card_specs span {
-	font-size: var(--bs);
 	display: flex;
-	font-weight: 400;
 }
 
 .card_specs .item {
 	font-size: var(--bm);
+	font-weight: 400;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -319,5 +339,120 @@ a {
 	text-decoration: underline;
 	color: rgb(86, 63, 220);
 	font-size: 14px;
-	font-weight: 400;
+	font-weight: 600;
+}
+
+/* services ---------------------- */
+
+.services {
+	background-color: var(--primary_color);
+	padding-block: 120px;
+	padding-inline: var(--sp_lr);
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
+.services_content {
+	display: flex;
+	gap: 60px;
+	align-items: center;
+}
+
+.left_services {
+	display: flex;
+	gap: 40px;
+	width: 500px;
+	flex-direction: column;
+}
+.left_services .feature_text {
+	text-decoration: underline;
+	color: white;
+	font-size: var(--feature_text);
+}
+.left_services p,
+h2,
+.feature_text {
+	color: white;
+}
+
+.right_services img {
+	width: 100%;
+	border-radius: 12px;
+}
+
+/* benefits +++++++++++++ */
+
+.benefits {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+}
+
+.benefits_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+.b_card {
+	max-width: 250px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	padding-block: 80px;
+	gap: 40px;
+	background-color: var(--background_color);
+}
+.text_card {
+	text-align: center;
+	gap: 200px;
+}
+.b_card .image {
+	width: 50px;
+	height: 50px;
+}
+.b_card .image img {
+	width: 100%;
+}
+.b_card h3 {
+	padding-bottom: 8px;
+}
+
+/* why choose us---------------------------------- */
+
+.why_choose_us {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+.feature_text {
+	color: var(--primary_color);
+}
+.why_choose_us_content {
+	display: flex;
+	gap: 40px;
+}
+
+.why_us_card {
+	width: 290px;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.271);
+
+	overflow: hidden;
+}
+.why_us_image img {
+	width: 100%;
+}
+.why_us_text {
+	text-align: center;
+	padding: 20px 10px;
+}
+.why_us_text h3 {
+	padding-bottom: 5px;
 }
