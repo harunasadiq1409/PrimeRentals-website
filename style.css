@@ -102,7 +102,6 @@ section {
 }
 
 header {
-	/* margin-block: 100px; */
 	width: 1366px;
 }
 
@@ -123,6 +122,15 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	z-index: 10000;
+	width: 1366px;
+	transition: 0.3s ease-in-out;
+	background-color: var(--background_color);
+}
+
+.sticky {
+	background-color: var(--background_color);
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.271);
 }
 
@@ -134,10 +142,8 @@ ul {
 	list-style: none;
 	gap: 28px;
 }
-/* ul li {
-	height: 10px;
-} */
-a {
+
+ul a {
 	display: inline-block;
 	text-decoration: none;
 	color: var(--primary_color);
@@ -146,11 +152,7 @@ a {
 	padding-bottom: 5px;
 }
 
-/* .active {
-	border-bottom: 2px solid var(--primary_color);
-	
-} */
-a::after {
+ul a::after {
 	display: inline-block;
 	content: "";
 	height: 2px;
@@ -160,7 +162,11 @@ a::after {
 	transition: 0.2s ease-in-out;
 }
 
-a:hover::after {
+.active::after {
+	width: 100%;
+	opacity: 100;
+}
+ul a:hover::after {
 	width: 100%;
 	opacity: 100;
 }
@@ -171,7 +177,7 @@ a:hover::after {
 /* hero section ------------------------------------------------------------------------------------*/
 .hero_section {
 	padding-inline: var(--sp_lr);
-	margin-top: 20px;
+	padding-top: 120px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -191,9 +197,20 @@ a:hover::after {
 .right_hero_section {
 	position: relative;
 }
-.right_hero_section img {
-	width: 100%;
+.image_view {
+	width: 580px;
+	overflow: hidden;
 	border-radius: 12px;
+}
+.image-wrapper {
+	width: 580px;
+	display: flex;
+	/* overflow: hidden; */
+	transform: translate();
+	transition: 1s ease-in-out;
+}
+.right_hero_section img {
+	width: 580px;
 }
 .reels_indicator {
 	display: flex;
@@ -210,8 +227,9 @@ a:hover::after {
 	width: 8px;
 	border-radius: 50px;
 	background-color: rgba(255, 255, 255, 0.686);
+	transition: 0.5s ease-in-out;
 }
-.reels:nth-child(1) {
+.reel_active {
 	width: 30px;
 	background-color: rgba(255, 255, 255, 0.832);
 }
@@ -287,6 +305,10 @@ h2,
 	border-radius: 12px;
 	overflow: hidden;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.271);
+	transition: all 0.2s ease-in-out;
+}
+.card:hover {
+	width: 380px;
 }
 .card_image {
 	position: relative;
@@ -504,7 +526,7 @@ h2,
 	overflow: hidden;
 }
 
-.why_us_image {
+/* .why_us_image {
 	position: relative;
 }
 .why_us_image::before {
@@ -520,7 +542,7 @@ h2,
 .why_us_card:hover .why_us_image::before {
 	width: 100%;
 }
-
+*/
 .why_us_image img {
 	width: 100%;
 }
@@ -651,6 +673,7 @@ form {
 .footer_bottom {
 	display: flex;
 	padding-block: 50px;
+	align-items: center;
 	gap: 250px;
 }
 
