@@ -80,10 +80,9 @@ body {
 header {
 	width: 100%;
 	top: 0;
-	float: right;
-
 	position: fixed;
 	z-index: 10000;
+	left: 0;
 }
 
 .body_container {
@@ -174,12 +173,11 @@ nav {
 	padding-block: 12px;
 	padding-top: 24px;
 	display: flex;
-	margin-inline: auto;
-	width: 1400px;
 	justify-content: space-between;
 	align-items: center;
 	transition: 0.3s ease-in-out;
 	background-color: var(--background_color);
+	width: 100%;
 }
 
 .sticky {
@@ -712,6 +710,7 @@ h2,
 	display: flex;
 	gap: var(--sp_gap);
 	padding-block: 100px;
+	align-items: center;
 }
 
 .footer_content_left {
@@ -844,8 +843,9 @@ form {
 	section {
 		width: 1400px;
 	}
-	header {
-		width: 100%;
+	nav {
+		width: 1400px;
+		margin-inline: auto;
 	}
 }
 @media (max-width: 1250px) {
@@ -901,6 +901,7 @@ form {
 
 	.nav_link ul li a {
 		padding-top: 30px;
+		font-size: 20px;
 	}
 }
 

@@ -14,6 +14,7 @@
 		
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 		<!-- box icons -->
 		<link
@@ -23,9 +24,12 @@
 		<link
 			href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
 			rel="stylesheet" />
+
+
 	</head>
 	<body>
 		
+			<section class="body_container">
 
 				<header>
 					<nav class="header">
@@ -34,7 +38,7 @@
 
 								<img
 								src="assets/logo.png"
-								alt="logo" />
+								alt="logo"  id="#"/>
 							</a>
 						</span>
 						<div class="nav_link">
@@ -42,15 +46,15 @@
 								<li>
 									<a
 										class="link active" href="#"
-										>Home</a
+										 nav_link_a="home">Home</a
 									>
 								</li>
-								<li><a  class="link" href="#about_us">About Us</a></li>
-								<li><a  class="link" href="#featured_products">Properties</a></li>
-								<li><a  class="link" href="#services">Services</a></li>
-								<li><a  class="link" href="#why_choose_us">Why Choose Us</a></li>
-								<li><a  class="link" href="#testimonial">Testimonials</a></li>
-								<li><a  class="link" href="#contact_us">Contact</a></li>
+								<li><a  class="link" nav_link_a="about_us" href="#about_us">About Us</a></li>
+								<li><a  class="link" nav_link_a="featured_products" href="#featured_products">Properties</a></li>
+								<li><a  class="link" nav_link_a="services" href="#services">Services</a></li>
+								<li><a  class="link" nav_link_a="why_choose_us" href="#why_choose_us">Why Choose Us</a></li>
+								<li><a  class="link" nav_link_a="testimonial" href="#testimonial">Testimonials</a></li>
+								<li><a  class="link" nav_link_a="contact_us" href="#contact_us">Contact</a></li>
 							</ul>
 						</div>
 						<span class="menu">
@@ -75,9 +79,8 @@
 						
 					</div>
 				</div>
-			<section class="body_container">
 					<!-- hero---------------------------------------------------- -->
-					<section class="hero_section " id="#">
+					<section class="hero_section section" id="home">
 		<div class="left_hero_section">
 			<h1  class="h1">Let’s help Find Your Dream Rental Today</h1>
 			<p class="pm">Discover the best rental properties with our trusted and professional services. Let us help you find the perfect place to call home.</p>
@@ -225,7 +228,7 @@
 					<!-- </div> -->
 				</div>
 			</div>
-			<div class="card item1">
+			<div class="card item2">
 				<div class="card_image">
 					<img
 						src="assets/F_prop_2.png"
@@ -279,7 +282,7 @@
 					<button class="btn">inquire Now</button>
 				</div>
 			</div>
-			<div class="card item1">
+			<div class="card item3">
 				<div class="card_image">
 					<img
 						src="assets/F_prop_3.png"
@@ -335,6 +338,7 @@
 					<!-- </div> -->
 				</div>
 			</div>
+			
 		</div>
 		<div class="more_properties">
 			<a href="#"
@@ -626,11 +630,12 @@
 
 					</section> 
 
-				</section>
+			</section>
 	
+<script src="https://unpkg.com/scrollreveal"></script>
 
+			<script
+				src="script.js"
+				defer></script>
 	</body>
-	<script
-		src="script.js"
-		defer></script>
 </html>

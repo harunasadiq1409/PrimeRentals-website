@@ -10,7 +10,14 @@ const reelsControl = document.querySelector(".play-btn");
 
 //  menu navigation ///////////////////////////////////////////////
 menu.addEventListener("click", function () {
-	navMenuToggle.classList.toggle("active");
+	navMenuToggle.classList.add("active");
+});
+
+// close menu on click link////
+navLinks.forEach((close_link) => {
+	close_link.addEventListener("click", function () {
+		navMenuToggle.classList.remove("active");
+	});
 });
 
 // sticky header ////////////////////////////////////////////////
@@ -19,37 +26,41 @@ window.addEventListener("scroll", () => {
 	toTop.classList.toggle("backToTop", window.scrollY > 5);
 });
 
-function resetLinkState(toHome) {
-	navLinks.forEach((close_link) => {
-		close_link.classList.remove("active");
-		if (toHome && close_link.textContent == "Home") {
-			close_link.classList.add("active");
+// function resetLinkState() {
+// 	navLinks.forEach((close_link) => {
+// 		close_link.classList.remove("active");
+// 	});
+// }
+
+// // handle active link on click clicks //////////////////////////////
+// navLinks.forEach((link) => {
+// 	link.addEventListener("click", () => {
+// 		resetLinkState();
+// 		link.classList.add("active");
+// 	});
+// });
+
+// handle active links on scroll //////////////////////////////
+
+let sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", function () {
+	sections.forEach((section) => {
+		let sectionID = section.getAttribute("id");
+		let sectionHeight = section.offsetHeight;
+		let sectionTop = section.offsetTop - 250;
+		let windowScrollY = window.scrollY;
+
+		if (windowScrollY >= sectionTop && windowScrollY < sectionTop + sectionHeight) {
+			document.querySelector(`.nav_link a[nav_link_a=${sectionID}]`).classList.add("active");
 		} else {
+			document.querySelector(`.nav_link a[nav_link_a=${sectionID}]`).classList.remove("active");
 		}
 	});
-}
-
-// handle active link clicks //////////////////////////////
-navLinks.forEach((link) => {
-	link.addEventListener("click", () => {
-		resetLinkState(false);
-		link.classList.add("active");
-		if (navMenuToggle.classList.contains("active")) {
-			navMenuToggle.classList.remove("active");
-		}
-	});
-});
-
-// handle back to top clicks//////////////////////////////
-toTop.addEventListener("click", () => resetLinkState(true));
-
-// handle logo link clicks back to home//////////////////////////////
-logos.forEach((logo) => {
-	logo.addEventListener("click", () => resetLinkState(true));
 });
 
 // reels animation///////////////////////////////////////////////////////////////////////////
-// let t = 0;
+
 let imageView = document.querySelector(".image_view");
 let imgs = document.querySelectorAll(".img");
 
@@ -59,7 +70,6 @@ let imageWrapperLength = imageSize * (imageLength - 1);
 
 function ImageResize(value) {
 	imgs.forEach((child) => {
-		console.log(child);
 		child.style.width = `${value}px`;
 	});
 }
@@ -146,7 +156,6 @@ let userName = document.querySelector(".name");
 let userEmail = document.querySelector(".email");
 let userNumber = document.querySelector(".number");
 let userMsg = document.querySelector(".msg");
-
 // handle on submit/////////////
 form.addEventListener("submit", function (e) {
 	e.preventDefault();
@@ -224,3 +233,12 @@ function emailValidation(emailValue) {
 		.toLowerCase()
 		.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 }
+
+// scroll reveal #############################################################################
+const sr = ScrollReveal({
+	origin: "bottom",
+	distance: "30px",
+	duration: 1500,
+	reset: true,
+});
+sr.reveal(`.left_hero_section, .about_us_right, .card, .left_services, .b_card, .why_us_card, .test_right, .footer_content_left, .footer_bottom`).interval(200);
