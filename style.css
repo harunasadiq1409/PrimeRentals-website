@@ -85,7 +85,8 @@ header {
 	left: 0;
 }
 
-.body_container {
+.body_container,
+footer {
 	margin-block: 0px;
 	margin-inline: auto;
 	max-width: 1400px;
@@ -122,6 +123,10 @@ section {
 
 .submit:hover {
 	background-color: var(--hover_btn);
+}
+:is(.btn, .submit):focus {
+	outline: 1px solid var(--primary_color);
+	border: 5px solid var(--background_color);
 }
 
 /* model//////////////////////////////////////////// */
@@ -234,11 +239,16 @@ ul a:hover::after {
 
 .menu {
 	font-size: 24px;
+	background: transparent;
+	display: none;
+	border: none;
+}
+.menu .remove {
 	display: none;
 }
 
 .top {
-	width: 0px;
+	width: auto;
 	height: 0px;
 	background-color: var(--primary_color);
 	box-shadow: 0px 0px 8px rgba(91, 91, 91, 0.761);
@@ -246,18 +256,27 @@ ul a:hover::after {
 	align-items: center;
 	justify-content: center;
 	position: fixed;
-	border-radius: 50%;
-	bottom: 5%;
+	border-radius: 50px;
+	bottom: 20px;
 	color: white;
-	right: 5%;
+	right: 20px;
 	z-index: 910;
 
 	transition: 0.2s ease-in-out;
 	font-size: 16px;
 	overflow: hidden;
+	border: none;
+	text-decoration: none;
+}
+.top a {
+	color: white;
+	display: flex;
+	align-item: center;
+	gap: 20px;
+	text-decoration: none;
+	padding: 20px;
 }
 .backToTop {
-	width: 50px;
 	height: 50px;
 }
 
@@ -283,6 +302,10 @@ ul a:hover::after {
 }
 .left_hero_section .btn {
 	margin-top: 20px;
+}
+.left_hero_section .btn a {
+	text-decoration: none;
+	color: var(--background_color);
 }
 .right_hero_section {
 	position: relative;
@@ -703,7 +726,7 @@ h2,
 	padding-inline: var(--sp_lr);
 	flex-direction: column;
 	background-color: var(--primary_color);
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 .footer_top {
@@ -772,6 +795,10 @@ form {
 	font-size: 16;
 	color: rgb(122, 122, 122);
 }
+form label {
+	display: inline-block;
+	width: 100%;
+}
 .input {
 	display: inline-block;
 	padding: 15px;
@@ -824,6 +851,9 @@ form {
 	gap: 10px;
 }
 
+.social_media_icon li {
+	display: inline;
+}
 .footer_bottom_right {
 	color: white;
 	display: flex;
@@ -890,7 +920,7 @@ form {
 		transition: 0.3s ease-in-out;
 	}
 
-	ul {
+	.nav_link ul {
 		flex-direction: column;
 	}
 

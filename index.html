@@ -14,7 +14,7 @@
 		
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 		<!-- box icons -->
 		<link
@@ -26,48 +26,48 @@
 			rel="stylesheet" />
 	</head>
 	<body>
-		
-			<section class="body_container">
-
-				<header>
-					<nav class="header">
-						<span class="logo link_logo">
-							<a href="#">
-
-								<img
-								src="assets/logo.png"
-								alt="logo"  id="#"/>
-							</a>
-						</span>
-						<div class="nav_link">
-							<ul class="nav_menu">
-								<li>
-									<a
-										class="link active" href="#"
-										 nav_link_a="home">Home</a
-									>
-								</li>
-								<li><a  class="link" nav_link_a="about_us" href="#about_us">About Us</a></li>
-								<li><a  class="link" nav_link_a="featured_products" href="#featured_products">Properties</a></li>
-								<li><a  class="link" nav_link_a="services" href="#services">Services</a></li>
-								<li><a  class="link" nav_link_a="why_choose_us" href="#why_choose_us">Why Choose Us</a></li>
-								<li><a  class="link" nav_link_a="testimonial" href="#testimonial">Testimonials</a></li>
-								<li><a  class="link" nav_link_a="contact_us" href="#contact_us">Contact</a></li>
-							</ul>
-						</div>
-						<span class="menu">
-							<i class="ri-menu-3-line"></i>
-						</span>
-					</nav>
+		<header>
+				<nav class="header">
+					<span class="logo link_logo">
 					<a href="#">
 
-		<span class="top "><i class="ri-arrow-up-line"></i>
-			
-		</span>
-		</a>
-				</header>
+						<img
+						src="assets/logo.png"
+						alt="PrimeRental logo"  id="#"/>
+					</a>
+					</span>
+					<span id="nav_menu" hidden>Navigation</span>
+					<button class="menu"  aria-labelledby="nav_menu" aria-expanded="false" >
+						<i class="ri-menu-3-line"></i>
+						<i class="ri-close-large-line remove"></i>
+					</button>
+					<div class="nav_link" aria-labelledby="nav_menu" role="dialog">
+						<!-- <img
+					src="/img/menu close.png"
+					alt=""
+					width="28"
+					height="28" />
+					</button> -->
+					<ul class="nav_menu">
+						<li>
+							<a
+								class="link active" href="#"
+									nav_link_a="home">Home</a
+							>
+						</li>
+						<li><a  class="link" nav_link_a="about_us" href="#about_us">About Us</a></li>
+						<li><a  class="link" nav_link_a="featured_products" href="#featured_products">Properties</a></li>
+						<li><a  class="link" nav_link_a="services" href="#services">Services</a></li>
+						<li><a  class="link" nav_link_a="why_choose_us" href="#why_choose_us">Why Choose Us</a></li>
+						<li><a  class="link" nav_link_a="testimonial" href="#testimonial">Testimonials</a></li>
+						<li><a  class="link" nav_link_a="contact_us" href="#contact_us">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		
+		</header>
 				<!-- model---------------------------------------------------- -->
-				<div class="model">
+				<div class="model" inert="">
 					<div class="model_content">
 						<h2 class="h2 model_text" >
 							
@@ -77,49 +77,48 @@
 						
 					</div>
 				</div>
+	    <main class="body_container">
 					<!-- hero---------------------------------------------------- -->
 					<section class="hero_section section" id="home">
 		<div class="left_hero_section">
 			<h1  class="h1">Let’s help Find Your Dream Rental Today</h1>
 			<p class="pm">Discover the best rental properties with our trusted and professional services. Let us help you find the perfect place to call home.</p>
-			<button class="btn">Explore Listings</button>
+			<button class="btn toFP" onclick=><a  href="#featured_products">Explore Listings </a></button>
 		</div>
 		<div class="right_hero_section">
-			<div class="reels_indicator_contents">
+			<div class="reels_indicator_contents" aria-label="slide">
 
-				<span class="reels_indicator">
+				<span class="reels_indicator" aria-hidden="true">
 					<span class="reels dot reel_active"></span>
 					<span class="reels dot"></span>
 					<span class="reels dot"></span>
-					
 				</span>
 				
-				<span class="play-btn">
+				<button class="play-btn" aria-checked="true" aria-label="slide control">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: msFilter" class="play control active"><path d="M7 6v12l10-6z"></path></svg>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: msFilter"class="pause control"><path d="M8 7h3v10H8zm5 0h3v10h-3z"></path></svg>
-				</span>
+				</button>
 			</div>
 			
 			<div class="image_view">
 
 				<div class="image-wrapper">
 					<div class="image">
-						
-						<img
+					<img
 						src="assets/house1.png"
-						alt="house image"  class="img"/>
+						alt="exotic house"  class="img"/>
 					</div>
 					<div class="image">
 						
 						<img
 						src="assets/house2.png"
-						alt="house image" class="img" />
+						alt="modern house" class="img" />
 					</div>
 					<div class="image">
 						
 						<img
 						src="assets/house3.png"
-						alt="house image" class="img"/>
+						alt="cosy living room" class="img"/>
 					</div>
 					
 				</div>
@@ -132,7 +131,7 @@
 			<div class="about_us_image">
 				<img
 					src="assets/aboutUs.png"
-					alt="about us image" />
+					alt="two males and one female expert communicating business" />
 			</div>
 		</div>
 		<div class="about_us_right">
@@ -147,7 +146,7 @@
 				</p>
 			</div>
 		</div>
-			<div class="metrics">
+			<div class="metrics" aria-label="our achievements">
 				<span>
 					<h1 class="h1">302+</h1>
 					<p class="ps">Happy <br />Customers</p>
@@ -167,37 +166,36 @@
 					<!-- featured properties------------------------------------------------------------------------ -->
 					<section class="featured_prop section" id="featured_products">
 		<span class="feature_text"> Our Featured Properties </span>
-		<div class="featured_prop_card">
-			<div class="card item1">
+		<ul class="featured_prop_card">
+			<li class="card item1">
 				<div class="card_image">
 					<img
 						src="assets/F_prop_1.png"
-						alt="luxury downtown apartment" />
+						alt="Luxury Downtown Apartment" />
 				</div>
 				<!-- <div class="card_content"> -->
 				<div class="card_text">
-					<div class="price_wrapper">
-						<span class="price">
+					 <div class="price_wrapper">
+					<span class="price" aria-label="price">
 
 							<h3 class="h3">$44,345 <span>Month</span></h3>
 						</span>
-
-						<span class="prop_type">
+						<span class="prop_type" aria-label="property type">
 							<p>Rent</p>
 						</span>
 					</div>
 					<div class="card_desc">
-						<h4 class="h4">Luxury Downtown Apartment</h4>
+						<h4 class="h4" id="pc1">Luxury Downtown Apartment</h4>
 						<p class="ps">
 							Experience modern living in this stylish, fully furnished apartment located in the heart of downtown. Features include high ceilings, floor-to-ceiling windows, and a private balcony.
 						</p>
 					</div>
-					<div class="card_specs">
+					<div class="card_specs" aria-label="specs">
 						<div class="item bed">
 							<span
 								><img
 									src="assets/bed_i.png"
-									alt="bed icon"
+									aria-hidden="true"
 							/></span>
 							<p>6 beds</p>
 						</div>
@@ -208,6 +206,8 @@
 								><img
 									src="assets/bath_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 
 							<p>6 Baths</p>
@@ -218,6 +218,8 @@
 								><img
 									src="assets/sqf_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 							<p>8000sqf</p>
 						</div>
@@ -225,34 +227,35 @@
 					<button class="btn">inquire Now</button>
 					<!-- </div> -->
 				</div>
-			</div>
-			<div class="card item2">
+			</li>
+			<li class="card item2">
 				<div class="card_image">
 					<img
 						src="assets/F_prop_2.png"
-						alt="luxury downtown apartment" />
+						alt="Cozy Suburban House"  />
 				</div>
 				<div class="card_text">
 					<div class="price_wrapper">
-						<span class="price">
+						<span class="price" aria-label="price">
 
 							<h3 class="h3">$1,200,000</h3>
 						</span>
 
-						<span class="prop_type sale">
+						<span class="prop_type sale" aria-label="property type">
 							<p>Sale</p>
 						</span>
 					</div>
 					<div class="card_desc">
-						<h4 class="h4">Cozy Suburban House</h4>
+						<h4 class="h4" >Cozy Suburban House</h4>
 						<p class="ps">Perfect for families, this charming house offers spacious living areas, a large backyard, and easy access to schools and parks.</p>
 					</div>
-					<div class="card_specs">
+					<div class="card_specs" aria-label="specs">
 						<div class="item bed">
 							<span
 								><img
 									src="assets/bed_i.png"
 									alt="bed icon"
+									aria-hidden="true"
 							/></span>
 							<p>5 beds</p>
 						</div>
@@ -263,6 +266,8 @@
 								><img
 									src="assets/bath_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 
 							<p>5 Baths</p>
@@ -273,14 +278,16 @@
 								><img
 									src="assets/sqf_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 							<p>8000sqf</p>
 						</div>
 					</div>
 					<button class="btn">inquire Now</button>
 				</div>
-			</div>
-			<div class="card item3">
+			</li>
+			<li class="card item3">
 				<div class="card_image">
 					<img
 						src="assets/F_prop_3.png"
@@ -289,12 +296,12 @@
 				<!-- <div class="card_content"> -->
 				<div class="card_text">
 					<div class="price_wrapper">
-						<span class="price">
+						<span class="price" aria-label="price">
 
 							<h3 class="h3">$24,499 / <span>Month</span></h3>
 						</span>
 
-						<span class="prop_type">
+						<span class="prop_type" aria-label="property type">
 							<p>Rent</p>
 						</span>
 					</div>
@@ -302,12 +309,14 @@
 						<h4 class="h4">Contemporary Loft</h4>
 						<p class="ps">Enjoy the urban lifestyle in this sleek loft with an open floor plan, state-of-the-art appliances, and close proximity to nightlife and shopping.</p>
 					</div>
-					<div class="card_specs">
+					<div class="card_specs" aria-label="specs">
 						<div class="item bed">
 							<span
 								><img
 									src="assets/bed_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 							<p>4 beds</p>
 						</div>
@@ -318,6 +327,8 @@
 								><img
 									src="assets/bath_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 
 							<p>4 Baths</p>
@@ -328,6 +339,8 @@
 								><img
 									src="assets/sqf_i.png"
 									alt="bed icon"
+									aria-hidden="true"
+
 							/></span>
 							<p>8000sqf</p>
 						</div>
@@ -335,9 +348,9 @@
 					<button class="btn">inquire Now</button>
 					<!-- </div> -->
 				</div>
-			</div>
+			</li>
 			
-		</div>
+		</ul>
 		<div class="more_properties">
 			<a href="#"
 				>Check Out More
@@ -365,7 +378,7 @@
 				</div>
 				</div>
 				<div class="right_services">
-					<img src="assets/service_image.png" alt="service image">
+					<img src="assets/service_image.png" alt="a clean smart apartment">
 				</div>
 				
 			</div>
@@ -374,10 +387,10 @@
 				<span class="feature_text">
 					Benefits Of Working With Us
 				</span>
-				<div class="benefits_wrapper">
-					<div class="b_card 1">
+				<ul class="benefits_wrapper">
+					<li class="b_card 1">
 						<div class="image">
-							<img src="assets/expert.png" alt="icon expert">
+							<img src="assets/expert.png" alt="icon expert head">
 						</div>
 						<div class="text_card">
 
@@ -388,10 +401,10 @@
 								Efficient and reliable services that maximize your property’s potential.
 							</p>
 						</div>
-					</div>
-						<div class="b_card 1">
+					</li>
+						<li class="b_card 1">
 						<div class="image">
-							<img src="assets/supplie.png" alt="icon supplies">
+							<img src="assets/supplie.png" alt="icon supplies flows ">
 						</div>
 						<div class="text_card">
 
@@ -402,10 +415,10 @@
 							Efficient and reliable services that maximize your property’s potential.
 							</p>
 						</div>
-					</div>
-						<div class="b_card  1">
+					</li>
+						<li class="b_card  1">
 						<div class="image">
-							<img src="assets/support.png" alt="icon support">
+							<img src="assets/support.png" alt="icon support head">
 						</div>
 						<div class="text_card">
 
@@ -416,10 +429,10 @@
 							Dedicated assistance to help you find the right home that fits your lifestyle.
 							</p>
 						</div>
-					</div>
-						<div class="b_card  1">
+					</li>
+						<li class="b_card  1">
 						<div class="image">
-							<img src="assets/market.png" alt="icon market">
+							<img src="assets/market.png" alt="icon market Knowledge">
 						</div>
 						<div class="text_card">
 
@@ -430,8 +443,8 @@
 								In-depth local insights to guide you in making informed rental decisions.
 							</p>
 						</div>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</div>
 					</section>
 					<!-- why choose us-------------------------------------------- -->
@@ -439,10 +452,10 @@
 		<span class="feature_text">
 			why choose us
 		</span>
-		<div class="why_choose_us_content">
-			<div class="why_us_card 1">
+		<ul class="why_choose_us_content">
+			<li class="why_us_card 1">
 				<div class="why_us_image">
-					<img src="assets/whyus1.png" alt="why choose us image">
+					<img src="assets/whyus1.png" alt="team trying to provide service tailored to customer need">
 				</div>
 				<div class="why_us_text">
 					<h3 class="h3">
@@ -452,11 +465,11 @@
 						We understand that every client is unique. Our personalized approach ensures you get exactly what you need.
 					</p>
 				</div>
-			</div>
+			</li>
 
-				<div class="why_us_card 1">
+				<li class="why_us_card 1">
 				<div class="why_us_image">
-					<img src="assets/whyus2.png" alt=" why choose us image">
+					<img src="assets/whyus2.png" alt="experts working together to figure out issues">
 				</div>
 				<div class="why_us_text">
 					<h3 class="h3">
@@ -464,42 +477,49 @@
 					<p class="pm">
 	With years of experience in the industry, we provide reliable and professional services you can count on.						</p>
 				</div>
-			</div>
-				<div class="why_us_card 3">
+			</li>
+				<li class="why_us_card 3">
 				<div class="why_us_image">
-					<img src="assets/whyus3.png" alt="why choose us image">
+					<img src="assets/whyus3.png" alt="a modern living room form one of our propertys">
 				</div>
 				<div class="why_us_text">
 					<h3 class="h3">
-	Wide Range of Properties						</h3>
+							Wide Range of Properties</h3>
 					<p class="pm">
-	From luxury apartments to family homes, we offer a diverse selection of rental properties to suit every taste and budget.						</p>
+							From luxury apartments to family homes, we offer a diverse selection of rental properties to suit every taste and budget.						</p>
 				</div>
-			</div>
-		</div>
+			</li>
+		</ul>
 
 					</section>
 					<!-- testimonial ------------------------------------------------------------------- -->
 						<section class="testimonial section" id="testimonial">
 		<div class="test_left">
-			<img src="assets/testimonial.png" alt="testimonial image">
+			<img src="assets/testimonial.png" alt="emily one of our client">
 		</div>
 		<di class="test_right">
 			<span class="feature_text">
 				Testimonial 
 			</span>
 			<div class="test_right_text">
-				<h4 >
-					“Prime Rentals helped us find the perfect apartment in no time. Their service was outstanding, and we couldn’t be happier with our new home.”
+				<h4 aria-label="quote">
+					<i>
+						“Prime Rentals helped us find the perfect apartment in no time. Their service was outstanding, and we couldn’t be happier with our new home.”
+					</i>
 				</h4>
-				<p class="pm">
+				<p class="pm" aria-label="client name">
 					— Emily W., Happy Renter
 				</p>
 			</div>
 		</di>
 						</section>
+		</main>
+			
+				<button class="top"><a href="#">back to top<i class="ri-arrow-up-line"></i>
+				</a>
+				</button>
 						<!-- footer--------------------------------------------------------- -->
-						<section class="footer section" id="contact_us">
+		<footer class="footer section" id="contact_us">
 		<div class="footer_top">
 			<div class="footer_content_left">
 				<span class="feature_text">
@@ -513,36 +533,45 @@
 						Ready to find your next home or need assistance with your rental property? Fill out the form below, and we’ll get back to you shortly.
 					</p>
 				</div>
-				<div class="footer_left_contact_info">
+				<ul class="footer_left_contact_info" aria-label = 'content infor'>
+					<li>
+
 
 					<div class="contact_info phone">
 						<div class="icon_img">
-							<img src="assets/phone.png" alt="phone icon">
+							<img src="assets/phone.png" alt="phone icon" aria-hidden= true>
 						</div>
 						<div class="text">
 
 							<p class="pm">
-								Phone
+								Phone Number
 							</p>
 							<h4 class="h4">
 								o8148055015
 							</h4>
 						</div>
 					</div>
-					<div class="contact_info email_icon">
+					</li>
+						<li>
+
+
+								<div class="contact_info email_icon">
 						<div class="icon_img">
-							<img src="assets/email.png" alt="email icon">
+							<img src="assets/email.png" alt="email icon" aria-hidden= true>
 						</div>
 						<div class="text">
 
 							<p class="pm">
-								email
+								Email Address
 							</p>
 							<h4 class="h4">
 								harunasadiq1409@gmail.com
 							</h4>
 						</div>
 					</div>
+						</li>
+						<li>
+
 					<div class="contact_info address">
 						<div class="icon_img">
 							<img src="assets/address.png" alt="address icon">
@@ -550,30 +579,36 @@
 						<div class="text">
 
 							<p class="pm">
-								address
+								location Address 
 							</p>
 							<h4 class="h4">
 								123 Main Street, City ville, ST 12345
 							</h4>
 						</div>
 					</div>
+						</li>
 
-				</div>
+					</ul>
 			</div>
 			<div class="footer_content_right">
 				<form action="#">
-				<input type="text" placeholder="Your Name" class="input name"   >
+					<label for="name">Full name
+						
+						<input type="text" placeholder="Haruna Sadiq" class="input name" id="name"   >
+					</label>
+						<div class="errorfield"></div>
+						<label for="email">Email
+							<input type="email"  placeholder="yourEmail@gmail.com" class="input email" id="email" >
+						</label>
 				<div class="errorfield"></div>
-
-				<input type="email"  placeholder="Your Email" class="input email"   >
+						<label for="number">Number
+							<input type="number"  placeholder="+1234567" class="input number" id="number"  >
+						</label>
 				<div class="errorfield"></div>
-
-				<input type="number"  placeholder="Your Number" class="input number"   >
+						<label for="message">
+							<textarea  placeholder="Your Massage" class="input msg" rows="6" id="message"  ></textarea>
+						</label>
 				<div class="errorfield"></div>
-
-				<textarea  placeholder="Your Massage" class="input msg" rows="6"   ></textarea>
-				<div class="errorfield"></div>
-
 
 				<button class="submit">Submit</button>
 			</form>
@@ -588,20 +623,22 @@
 						<img src="assets/logowhite.png" alt="logo">
 					</a>
 					</div>
-					<div class="social_media_icon">
-					<div class="icon twitter">
+					<ul class="social_media_icon" aria-label = 'social media links'>
+				<li>	<a href="#"><span class="icon twitter">
 						<img src="assets/twitter.png" alt="twitter icon" width="32px" height="32px">
-					</div>
-						<div class="icon facebook">
+									</span>
+				</a>
+			</li>
+						<li>	<a href="#"><span class="icon facebook">
 						<img src="assets/facebook.png" alt="facebook icon" width="32px" height="32px">
-					</div>
-						<div class="icon instagram">
+					</span></a></li>
+					<li>	<a href="#"><span class="icon instagram">
 						<img src="assets/instagram.png" alt="instagram icon" width="32px" height="32px">
-					</div>
-						<div class="icon whatapp">
+					</span></a></li>
+					<li>	<a href="#"><span class="icon whatapp">
 						<img src="assets/whatapp.png" alt="whatapp icon" width="32px" height="32px">
-					</div>
-				</div>
+					</span></a></li>
+				</ul>
 
 			</div>
 			<div class="footer_bottom_right">
@@ -626,9 +663,8 @@
 	</div>
 	<!-- </div> -->
 
-					</section> 
+		</footer> 
 
-			</section>
 	
 <script src="https://unpkg.com/scrollreveal"></script>
 

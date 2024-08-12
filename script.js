@@ -7,16 +7,56 @@ const logos = document.querySelectorAll(".link_logo");
 const menu = document.querySelector(".menu");
 const navMenuToggle = document.querySelector(".nav_link");
 const reelsControl = document.querySelector(".play-btn");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
+
+function hideBodyContent(v) {
+	if (v) {
+		main.setAttribute("inert", "");
+		footer.setAttribute("inert", "");
+	} else {
+		main.removeAttribute("inert");
+		footer.removeAttribute("inert");
+	}
+}
 
 //  menu navigation ///////////////////////////////////////////////
+let nav_menu = document.querySelector(".nav_menu");
+let media = window.matchMedia("(width < 850px");
+
+function setTopNav(e) {
+	if (e.matches) {
+		nav_menu.setAttribute("inert", "");
+	} else {
+		nav_menu.removeAttribute("inert");
+	}
+}
+
+setTopNav(media);
+media.addEventListener("change", function () {
+	setTopNav(media);
+});
 menu.addEventListener("click", function () {
-	navMenuToggle.classList.add("active");
+	navMenuToggle.classList.toggle("active");
+	menu.querySelectorAll("i").forEach((icon) => icon.classList.toggle("remove"));
+	if (navMenuToggle.classList.contains("active")) {
+		navMenuToggle.setAttribute("aria-expanded", "true");
+		nav_menu.removeAttribute("inert");
+		hideBodyContent(true);
+	} else {
+		navMenuToggle.setAttribute("aria-expanded", "false");
+		nav_menu.setAttribute("inert", "");
+		hideBodyContent(false);
+	}
 });
 
 // close menu on click link////
 navLinks.forEach((close_link) => {
 	close_link.addEventListener("click", function () {
 		navMenuToggle.classList.remove("active");
+		menu.querySelectorAll("i").forEach((icon) => icon.classList.toggle("remove"));
+		navMenuToggle.setAttribute("aria-expanded", "false");
+		hideBodyContent(false);
 	});
 });
 
@@ -24,6 +64,9 @@ navLinks.forEach((close_link) => {
 window.addEventListener("scroll", () => {
 	header.classList.toggle("sticky", window.scrollY > 20);
 	toTop.classList.toggle("backToTop", window.scrollY > 5);
+	setTimeout(() => {
+		toTop.classList.remove("backToTop");
+	}, 5000);
 });
 
 // function resetLinkState() {
@@ -129,7 +172,13 @@ reelsControl.addEventListener("click", function () {
 	pauseSlider = !pauseSlider;
 	play.classList.toggle("active");
 	pause.classList.toggle("active");
+
 	runSliderAnimation();
+	if (pause.classList.contains("active")) {
+		pause.parentElement.setAttribute("aria-checked", "false");
+	} else {
+		pause.parentElement.setAttribute("aria-checked", "true");
+	}
 });
 
 // MODEL #############################################################
@@ -140,13 +189,19 @@ let allBtn = document.querySelectorAll(".btn");
 
 allBtn.forEach((btn) => {
 	btn.addEventListener("click", function () {
-		model.classList.add("active");
+		if (btn.classList.contains("toFP")) {
+		} else {
+			model.classList.add("active");
+			model.removeAttribute("inert");
+			modelCloseBtn.focus();
+		}
 	});
 });
 
 // close model ////////////////////////////
 modelCloseBtn.addEventListener("click", () => {
 	model.classList.remove("active");
+	model.setAttribute("inert", "");
 });
 
 // form handling and validation ##################################################################
