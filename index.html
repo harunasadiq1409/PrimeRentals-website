@@ -36,12 +36,20 @@
 						alt="PrimeRental logo"  id="#"/>
 					</a>
 					</span>
-					<span id="nav_menu" hidden>Navigation</span>
+					<!-- <span id="nav_menu" hidden>Navigation</span>
 					<button class="menu"  aria-labelledby="nav_menu" aria-expanded="false" >
 						<i class="ri-menu-3-line"></i>
 						<i class="ri-close-large-line remove"></i>
 					</button>
-					<div class="nav_link" aria-labelledby="nav_menu" role="dialog">
+					
+					<div class="nav_link" aria-labelledby="nav_menu" role="dialog"> -->
+
+					<button class="menu"  aria-controls="NavigationLinks" aria-expanded="false" title="open and close navigation">
+						<i class="ri-menu-3-line"></i>
+						<i class="ri-close-large-line remove"></i>
+					</button>
+					
+					<div class="nav_link" id="NavigationLinks" role="dialog">
 					<ul class="nav_menu">
 						<li>
 							<a
@@ -611,24 +619,24 @@
 		<div class="footer_bottom">
 			<div class="footer_bottom_left">
 				<div class="footer_logo link_logo" >
-					<a href="#">
+					<a href="#" title="PrimeRental logo">
 
 						<img src="assets/logowhite.png" alt="logo">
 					</a>
 					</div>
 					<ul class="social_media_icon" aria-label = 'social media links'>
-				<li>	<a href="#"><span class="icon twitter">
+				<li>	<a href="#" title="visit our Twitter"><span class="icon twitter">
 						<img src="assets/twitter.png" alt="twitter icon" width="32px" height="32px">
 									</span>
 				</a>
 			</li>
-						<li>	<a href="#"><span class="icon facebook">
+						<li>	<a href="#" title="visit our facebook"><span class="icon facebook">
 						<img src="assets/facebook.png" alt="facebook icon" width="32px" height="32px">
 					</span></a></li>
-					<li>	<a href="#"><span class="icon instagram">
+					<li>	<a href="#" title="visit our instagram"><span class="icon instagram">
 						<img src="assets/instagram.png" alt="instagram icon" width="32px" height="32px">
 					</span></a></li>
-					<li>	<a href="#"><span class="icon whatapp">
+					<li>	<a href="#" title="visit our whatapp"><span class="icon whatapp">
 						<img src="assets/whatapp.png" alt="whatapp icon" width="32px" height="32px">
 					</span></a></li>
 				</ul>
@@ -662,7 +670,6 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 
 			<script
-				src="script.js"
-				defer></script>
+				src="script.js"></script>
 	</body>
 </html>

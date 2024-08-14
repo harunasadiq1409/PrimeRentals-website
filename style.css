@@ -322,7 +322,7 @@ ul a:hover::after {
 	transition: 1s ease-in-out;
 }
 .right_hero_section img {
-	width: 100%;
+	width: 500px;
 	object-fit: cover;
 }
 .reels_indicator_contents {
