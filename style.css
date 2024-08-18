@@ -106,7 +106,7 @@ section {
 .btn,
 .submit {
 	background-color: var(--primary_color);
-	padding: 10px 30px;
+	padding: 15px 30px;
 	color: white;
 	font-weight: 600;
 	border-radius: 4px;
@@ -171,6 +171,33 @@ section {
 	font-weight: 500;
 	margin: 0;
 }
+
+.skip-to-products {
+	position: absolute;
+	z-index: 100010;
+	translate: 0% -100%;
+	transition: translate 0.3s ease-in-out;
+	opacity: 0;
+}
+.skip-to-products a {
+	padding: 20px 25px;
+	display: inline-block;
+	border-radius: 8px;
+	background-color: var(--primary_color);
+	color: white;
+	text-decoration: none;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.skip-to-products a:focus {
+	outline: 1px solid var(--primary_color);
+	border: 5px solid var(--background_color);
+}
+.skip-to-products:has(a:focus) {
+	translate: 0% 0%;
+	opacity: 1;
+}
+
 /* header ---------------------------------------------------------------------------------*/
 
 nav {
