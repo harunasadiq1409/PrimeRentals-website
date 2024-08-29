@@ -100,6 +100,7 @@ section {
 	font-size: var(--feature_text);
 	font-weight: 500;
 	text-transform: capitalize;
+	word-wrap: nowrap;
 }
 
 .btn,
@@ -584,7 +585,7 @@ ul a:hover::after {
 
 .featured_prop .feature_text {
 	color: var(--primary_color);
-
+	text-wrap: nowrap;
 	font-size: var(--feature_text);
 }
 
@@ -619,7 +620,6 @@ ul a:hover::after {
 	flex-direction: column;
 }
 .left_services .feature_text {
-	text-decoration: underline;
 	color: white;
 	font-size: var(--feature_text);
 }
@@ -694,6 +694,8 @@ h2,
 }
 .feature_text {
 	color: var(--primary_color);
+	font-size: var(--feature_text);
+	text-wrap: nowrap;
 }
 .why_choose_us_content {
 	display: grid;
