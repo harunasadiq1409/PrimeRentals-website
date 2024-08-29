@@ -96,7 +96,6 @@ section {
 	width: 100%;
 }
 .feature_text {
-	text-decoration: underline;
 	color: white;
 	font-size: var(--feature_text);
 	font-weight: 500;
@@ -283,22 +282,25 @@ ul a:hover::after {
 	align-items: center;
 	justify-content: center;
 	position: fixed;
-	border-radius: 50px;
+	border-radius: 5px;
 	bottom: 20px;
 	color: white;
 	right: 20px;
 	z-index: 910;
-
 	transition: 0.2s ease-in-out;
 	font-size: 16px;
 	overflow: hidden;
 	border: none;
 	text-decoration: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 .top a {
 	color: white;
 	display: flex;
-	align-item: center;
+	align-items: center;
 	gap: 20px;
 	text-decoration: none;
 	padding: 20px;
@@ -520,7 +522,7 @@ ul a:hover::after {
 }
 
 .price_wrapper .prop_type {
-	background-color: #40cc29;
+	background-color: #208510;
 	padding: 8px 16px;
 	color: white;
 	font-size: var(--bs);
@@ -533,7 +535,7 @@ ul a:hover::after {
 }
 
 .price_wrapper .sale {
-	background-color: #cca829;
+	background-color: #83720d;
 }
 .card_text {
 	display: flex;
@@ -582,7 +584,7 @@ ul a:hover::after {
 
 .featured_prop .feature_text {
 	color: var(--primary_color);
-	text-decoration: underline;
+
 	font-size: var(--feature_text);
 }
 
@@ -799,7 +801,16 @@ h2,
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background_color);
 }
+.contact_info .icon_img i {
+	color: var(--primary_color);
+	font-size: 18px;
+}
+
 .contact_info .icon_img img {
 	width: 100%;
 }
@@ -864,7 +875,7 @@ form label {
 	flex-basis: 50%;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 30px;
 }
 
 .footer_logo {
@@ -970,10 +981,10 @@ form label {
 	}
 
 	.image-wrapper {
-		width: 350px;
+		width: 450px;
 	}
 	.image_view {
-		width: 350px;
+		width: 50px;
 	}
 }
 
@@ -1075,6 +1086,17 @@ form label {
 		--sp_lr: 20px;
 		--sp_gap: 40px;
 	}
+	.b_card .image {
+		width: 100px;
+		height: 100px;
+	}
 }
-
+@media (max-width: 380px) {
+	.image-wrapper {
+		width: 320px;
+	}
+	.image_view {
+		width: 320px;
+	}
+}
 /* error#################################### */
