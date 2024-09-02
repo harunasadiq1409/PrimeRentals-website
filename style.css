@@ -101,6 +101,7 @@ section {
 	font-weight: 500;
 	text-transform: capitalize;
 	word-wrap: nowrap;
+	text-align: center;
 }
 
 .btn,
@@ -536,7 +537,7 @@ ul a:hover::after {
 }
 
 .price_wrapper .sale {
-	background-color: #83720d;
+	background-color: #e8c63b;
 }
 .card_text {
 	display: flex;
@@ -587,6 +588,7 @@ ul a:hover::after {
 	color: var(--primary_color);
 	text-wrap: nowrap;
 	font-size: var(--feature_text);
+	text-align: center;
 }
 
 .more_properties a {
@@ -775,6 +777,7 @@ h2,
 }
 
 .footer_content_left .feature_text {
+	text-align: center;
 	color: white;
 }
 
@@ -874,7 +877,7 @@ form label {
 }
 
 .footer_bottom_left {
-	flex-basis: 50%;
+	flex-basis: 40%;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -974,6 +977,9 @@ form label {
 		padding-top: 30px;
 		font-size: 20px;
 	}
+	.footer_content_right {
+		flex-basis: 1000px;
+	}
 }
 
 @media (max-width: 790px) {
@@ -983,10 +989,10 @@ form label {
 	}
 
 	.image-wrapper {
-		width: 450px;
+		width: 400px;
 	}
 	.image_view {
-		width: 50px;
+		width: 400px;
 	}
 }
 
@@ -1024,7 +1030,6 @@ form label {
 	.left_hero_section {
 		width: 100%;
 		align-items: center;
-		text-align: center;
 	}
 
 	.about_us {
@@ -1033,7 +1038,6 @@ form label {
 	.about_us .about_us_right {
 		width: 100%;
 		align-items: center;
-		text-align: center;
 	}
 	.about_us_text_content {
 		flex-direction: column;
@@ -1050,7 +1054,6 @@ form label {
 	.services_content .left_services {
 		width: 100%;
 		align-items: center;
-		text-align: center;
 	}
 
 	.testimonial {
@@ -1060,7 +1063,6 @@ form label {
 	.test_right {
 		width: 100%;
 		align-items: center;
-		text-align: center;
 	}
 
 	.footer_top {
@@ -1068,12 +1070,11 @@ form label {
 	}
 	.footer_content_left {
 		width: 100%;
-		align-items: center;
-	}
-	.footer_left_text {
-		text-align: center;
 	}
 
+	.footer_content_right {
+		flex-basis: auto;
+	}
 	.footer_bottom {
 		flex-direction: column;
 		text-align: center;

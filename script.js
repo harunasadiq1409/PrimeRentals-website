@@ -64,9 +64,6 @@ navLinks.forEach((close_link) => {
 window.addEventListener("scroll", () => {
 	header.classList.toggle("sticky", window.scrollY > 20);
 	toTop.classList.toggle("backToTop", window.scrollY > 5);
-	setTimeout(() => {
-		toTop.classList.remove("backToTop");
-	}, 5000);
 });
 
 // function resetLinkState() {
